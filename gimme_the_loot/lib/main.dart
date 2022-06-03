@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:gimme_the_loot/imports.dart";
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +30,6 @@ class GimmeTheLootApp extends StatefulWidget {
 class _GimmeTheLootAppState extends State<GimmeTheLootApp> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(home: HomeScreen());
   }
 }
