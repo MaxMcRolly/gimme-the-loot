@@ -1,5 +1,5 @@
-import 'package:gimme_the_loot/home/logic/cubit/page_view_cubit.dart';
-import 'package:gimme_the_loot/home/widgets/bottom_navigation_bar.dart';
+
+
 import "package:gimme_the_loot/imports.dart";
 
 class HomeScreen extends StatefulWidget {
