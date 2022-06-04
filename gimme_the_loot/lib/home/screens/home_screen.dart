@@ -1,5 +1,3 @@
-
-
 import "package:gimme_the_loot/imports.dart";
 
 class HomeScreen extends StatefulWidget {
@@ -18,9 +16,34 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(title: Text("Gimme the Loot")),
-          body:PageView(onPageChanged: (value){context.read<PageViewCubit>().changeCurrentPageIndex(pageIndex: value);},children: [],),
-          bottomNavigationBar:
-              BottomNavBar(index: state.currentPageIndex, pageController: homePageController),
+          body: PageView(
+            onPageChanged: (value) {
+              context
+                  .read<PageViewCubit>()
+                  .changeCurrentPageIndex(pageIndex: value);
+            },
+            controller: homePageController,
+            children: [
+              Scaffold(
+                body: Center(
+                  child: Text("test1"),
+                ),
+              ),
+              Scaffold(
+                body: Center(
+                  child: Text("test2"),
+                ),
+              ),
+              Scaffold(
+                body: Center(
+                  child: Text("test3"),
+                ),
+              ),
+            ],
+          ),
+          bottomNavigationBar: BottomNavBar(
+              index: state.currentPageIndex,
+              pageController: homePageController),
         );
       },
     );

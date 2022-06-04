@@ -1,4 +1,3 @@
-
 import "package:gimme_the_loot/imports.dart";
 
 void main() {
@@ -12,9 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider<PageViewCubit>(
-            create: (context) => PageViewCubit(currentPageIndex: 0),
-          ),],
+      providers: [
+        BlocProvider<PageViewCubit>(
+          create: (context) => PageViewCubit(currentPageIndex: 0),
+        ),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
