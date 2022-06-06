@@ -38,7 +38,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(FontAwesomeIcons.coins),
-          label: "Finance",
+          label: "Finances",
         ),
         BottomNavigationBarItem(
           icon: Icon(FontAwesomeIcons.moneyBillTrendUp),
