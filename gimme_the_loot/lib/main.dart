@@ -37,6 +37,6 @@ class GimmeTheLootApp extends StatefulWidget {
 class _GimmeTheLootAppState extends State<GimmeTheLootApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeScreen());
+    return MaterialApp(theme: getTheme(), home: HomeScreen());
   }
 }
