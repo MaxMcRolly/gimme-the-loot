@@ -1,4 +1,5 @@
 import "package:gimme_the_loot/imports.dart";
+import 'package:gimme_the_loot/investing/screens/investing.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return BlocBuilder<PageViewCubit, PageViewState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(title: Text("Gimme the Loot")),
+          // appBar: AppBar(title: Text("Gimme the Loot")),
           body: PageView(
             onPageChanged: (value) {
               context
@@ -24,19 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             controller: homePageController,
             children: [
+              FinancesScreen(),
+              InvestingScreen(),
               Scaffold(
                 body: Center(
-                  child: Text("test1"),
-                ),
-              ),
-              Scaffold(
-                body: Center(
-                  child: Text("test2"),
-                ),
-              ),
-              Scaffold(
-                body: Center(
-                  child: Text("test3"),
+                  child: Text("blank screen, nothing to see here"),
                 ),
               ),
             ],
