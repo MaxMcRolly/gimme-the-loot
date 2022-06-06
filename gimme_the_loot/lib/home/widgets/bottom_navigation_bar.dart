@@ -1,3 +1,4 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import "package:gimme_the_loot/imports.dart";
 
 class BottomNavBar extends StatefulWidget {
@@ -29,16 +30,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      // backgroundColor: Colors.black,
+      // unselectedItemColor: Colors.orangeAccent,
+      // fixedColor: Colors.yellow,
       onTap: _onItemTapped,
       currentIndex: context.read<PageViewCubit>().state.currentPageIndex,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.abc),
-          label: "item1",
+          icon: Icon(FontAwesomeIcons.coins),
+          label: "Finance",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.abc_outlined),
-          label: "item2",
+          icon: Icon(FontAwesomeIcons.moneyBillTrendUp),
+          label: "Investing",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.abc_rounded),
