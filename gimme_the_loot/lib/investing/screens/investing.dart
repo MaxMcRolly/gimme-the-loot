@@ -1,4 +1,4 @@
-import "package:gimme_the_loot/imports.dart";
+import 'package:gimme_the_loot/common/imports.dart';
 
 class InvestingScreen extends StatefulWidget {
   const InvestingScreen({Key? key}) : super(key: key);
