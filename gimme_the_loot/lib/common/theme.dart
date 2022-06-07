@@ -1,4 +1,4 @@
-import 'imports.dart';
+import '../imports.dart';
 
 ThemeData getTheme() {
   return ThemeData(

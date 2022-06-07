@@ -1,5 +1,5 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:gimme_the_loot/common/imports.dart';
+import 'package:gimme_the_loot/imports.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({

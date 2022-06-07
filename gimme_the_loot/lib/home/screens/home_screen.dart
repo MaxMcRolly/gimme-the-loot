@@ -1,4 +1,4 @@
-import 'package:gimme_the_loot/common/imports.dart';
+import 'package:gimme_the_loot/imports.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);

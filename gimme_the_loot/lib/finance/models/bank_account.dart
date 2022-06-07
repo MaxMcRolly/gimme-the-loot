@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:gimme_the_loot/common/imports.dart';
+import 'package:gimme_the_loot/imports.dart';
 
 import "dart:convert";
 

@@ -2,7 +2,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-import "package:gimme_the_loot/imports.dart";
+import 'package:gimme_the_loot/imports.dart';
 
 class TotalBalanceCard extends StatefulWidget {
   const TotalBalanceCard({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _TotalBalanceCardState extends State<TotalBalanceCard> {
           BoxShadow(color: Colors.orangeAccent, blurRadius: 5, spreadRadius: 2)
         ],
         borderRadius: BorderRadius.circular(4),
-        color: Colors.orangeAccent,
+        color: Colors.orange,
       ),
       height: 70,
       child: Column(

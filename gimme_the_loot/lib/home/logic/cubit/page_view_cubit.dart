@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:gimme_the_loot/common/imports.dart';
+import 'package:gimme_the_loot/imports.dart';
 import 'package:meta/meta.dart';
 
 part 'page_view_state.dart';
