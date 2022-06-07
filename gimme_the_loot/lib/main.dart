@@ -1,4 +1,4 @@
-import "package:gimme_the_loot/imports.dart";
+import 'package:gimme_the_loot/common/imports.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +37,9 @@ class GimmeTheLootApp extends StatefulWidget {
 class _GimmeTheLootAppState extends State<GimmeTheLootApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: getTheme(), home: HomeScreen());
+    return MaterialApp(
+      theme: getTheme(),
+      home: HomeScreen(),
+    );
   }
 }
