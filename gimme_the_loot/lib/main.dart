@@ -17,11 +17,15 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+        theme: getTheme(),
+        initialRoute: "/",
+        routes: {
+          "/": ((context) => GimmeTheLootApp()),
+          "/account_creation_screen": ((context) => CreateBankAccountScreen())
+        },
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: GimmeTheLootApp(),
+        
+        // home: GimmeTheLootApp(),
       ),
     );
   }
@@ -37,9 +41,6 @@ class GimmeTheLootApp extends StatefulWidget {
 class _GimmeTheLootAppState extends State<GimmeTheLootApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: getTheme(),
-      home: HomeScreen(),
-    );
+    return HomeScreen();
   }
 }
