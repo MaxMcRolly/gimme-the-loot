@@ -6,5 +6,6 @@ import '../imports.dart';
 late SharedPreferences sharedPreferences;
 Future<void> initalizeLocalData() async {
   sharedPreferences = await SharedPreferences.getInstance();
+  // BankAccount().deleteAll();
   await BankAccount().readFromFile();
 }
