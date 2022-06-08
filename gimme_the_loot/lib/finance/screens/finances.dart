@@ -31,6 +31,14 @@ class _FinancesScreenState extends State<FinancesScreen> {
                     SizedBox(
                       height: 16,
                     ),
+                    OutlinedButton(
+                      onPressed: () async {
+                        await Navigator.pushNamed(
+                            context, "/account_creation_screen");
+                        setState(() {});
+                      },
+                      child: Text("Add bank account"),
+                    ),
                   ],
                 ),
               ),

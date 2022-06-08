@@ -1,3 +1,4 @@
+import 'package:gimme_the_loot/finance/models/bank_account.dart';
 import "package:gimme_the_loot/imports.dart";
 
 class CreateBankAccountScreen extends StatefulWidget {
@@ -16,6 +17,7 @@ class _CreateBankAccountScreenState extends State<CreateBankAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Add bank account"),
       ),
@@ -31,9 +33,38 @@ class _CreateBankAccountScreenState extends State<CreateBankAccountScreen> {
               decoration: InputDecoration(labelText: "Account Name"),
               controller: accountNameController,
             ),
+            TextFormField(
+              decoration: InputDecoration(labelText: "Bank Name"),
+              controller: bankNameController,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                  labelText: "Initial balance", suffix: Text("BYN")),
+              controller: initialBalanceController,
+            ),
+            OutlinedButton(
+              onPressed: () {
+                _createBankAccount();
+                Navigator.pop(context);
+              },
+              child: Text("Add account"),
+            )
           ],
         ),
       ),
     );
+  }
+
+  _createBankAccount() {
+    bankAccounts.add(
+      BankAccount(
+        bankName: bankNameController.text,
+        accountName: accountNameController.text,
+        accountBalance: double.tryParse(initialBalanceController.text),
+        currency: accountCurrencyController.text,
+      ),
+    );
+    BankAccount().saveToFile();
   }
 }
